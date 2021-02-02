@@ -53,7 +53,7 @@
     "cpu": "2048",
     "executionRoleArn": "arn:aws:iam::967636366309:role/ecsTaskExecutionRole",
     "family": "testingagain",
-    "tags": []
+    "tags": [],
     "placementConstraints": [],
     "taskRoleArn": "arn:aws:iam::967636366309:role/ecsTaskExecutionRole"
 }

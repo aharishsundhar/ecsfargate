@@ -42,8 +42,8 @@ jobs:
       uses: aws-actions/amazon-ecs-render-task-definition@v1
       with:
         task-definition: ecsfargate.json
-#         container-name: newoneui-8442
-#         image: harishsundhar/fargate:newoneui-844    
+        container-name: newoneui-8442
+        image: harishsundhar/fargate:newoneui-8442   
 
     - name: Deploy Amazon ECS task definition
       uses: aws-actions/amazon-ecs-deploy-task-definition@v1

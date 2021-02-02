@@ -44,6 +44,9 @@ jobs:
         task-definition: ecsfargte.json
         container-name: newoneui-8442
         image: harishsundhar/fargate:newoneui-8442
+    - run: |
+        ls
+        pwd     
 
     - name: Deploy Amazon ECS task definition
       uses: aws-actions/amazon-ecs-deploy-task-definition@v1

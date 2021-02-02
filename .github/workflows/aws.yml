@@ -50,4 +50,5 @@ jobs:
       with:
         task-definition: ${{ steps.task-def.outputs.task-definition }}
         cluster: deployment-of-generated-code
+        codedeploy-appspec: appspec.json
         wait-for-service-stability: true

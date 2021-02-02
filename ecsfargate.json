@@ -29,7 +29,7 @@
             "logConfiguration": {
                 "logDriver": "awslogs",
                 "options": {
-                    "awslogs-group": "/ecs/testingagain",
+                    "awslogs-group": "/ecs/autodeploy",
                     "awslogs-region": "us-east-1",
                     "awslogs-stream-prefix": "ecs"
                 }
@@ -52,7 +52,7 @@
     "memory": "5120",
     "cpu": "2048",
     "executionRoleArn": "arn:aws:iam::967636366309:role/ecsTaskExecutionRole",
-    "family": "testingagain",
+    "family": "autodeploy",
     "tags": [],
     "placementConstraints": [],
     "taskRoleArn": "arn:aws:iam::967636366309:role/ecsTaskExecutionRole"

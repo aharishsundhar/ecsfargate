@@ -9,7 +9,7 @@
                 "logDriver": "awslogs",
                 "secretOptions": null,
                 "options": {
-                    "awslogs-group": "/ecs/tickingapps",
+                    "awslogs-group": "/ecs/tickingapp",
                     "awslogs-region": "us-east-1",
                     "awslogs-stream-prefix": "ecs"
                 }
@@ -78,7 +78,7 @@
                 "logDriver": "awslogs",
                 "secretOptions": null,
                 "options": {
-                    "awslogs-group": "/ecs/ticketingapps",
+                    "awslogs-group": "/ecs/ticketingapp",
                     "awslogs-region": "us-east-1",
                     "awslogs-stream-prefix": "ecs"
                 }
@@ -169,7 +169,7 @@
                 "logDriver": "awslogs",
                 "secretOptions": null,
                 "options": {
-                    "awslogs-group": "/ecs/ticketingapps",
+                    "awslogs-group": "/ecs/ticketingapp",
                     "awslogs-region": "us-east-1",
                     "awslogs-stream-prefix": "ecs"
                 }
@@ -269,7 +269,7 @@
                 "logDriver": "awslogs",
                 "secretOptions": null,
                 "options": {
-                    "awslogs-group": "/ecs/ticketingapps",
+                    "awslogs-group": "/ecs/ticketingapp",
                     "awslogs-region": "us-east-1",
                     "awslogs-stream-prefix": "ecs"
                 }
@@ -369,7 +369,7 @@
                 "logDriver": "awslogs",
                 "secretOptions": null,
                 "options": {
-                    "awslogs-group": "/ecs/ticketingapps",
+                    "awslogs-group": "/ecs/ticketingapp",
                     "awslogs-region": "us-east-1",
                     "awslogs-stream-prefix": "ecs"
                 }
@@ -469,7 +469,7 @@
                 "logDriver": "awslogs",
                 "secretOptions": null,
                 "options": {
-                    "awslogs-group": "/ecs/ticketingapps",
+                    "awslogs-group": "/ecs/ticketingapp",
                     "awslogs-region": "us-east-1",
                     "awslogs-stream-prefix": "ecs"
                 }
@@ -585,7 +585,7 @@
                 "logDriver": "awslogs",
                 "secretOptions": null,
                 "options": {
-                    "awslogs-group": "/ecs/ticketingapps",
+                    "awslogs-group": "/ecs/ticketingapp",
                     "awslogs-region": "us-east-1",
                     "awslogs-stream-prefix": "ecs"
                 }
@@ -681,7 +681,7 @@
                 "logDriver": "awslogs",
                 "secretOptions": null,
                 "options": {
-                    "awslogs-group": "/ecs/ticketingapps",
+                    "awslogs-group": "/ecs/ticketingapp",
                     "awslogs-region": "us-east-1",
                     "awslogs-stream-prefix": "ecs"
                 }
@@ -777,7 +777,7 @@
                 "logDriver": "awslogs",
                 "secretOptions": null,
                 "options": {
-                    "awslogs-group": "/ecs/ticketingapps",
+                    "awslogs-group": "/ecs/ticketingapp",
                     "awslogs-region": "us-east-1",
                     "awslogs-stream-prefix": "ecs"
                 }
@@ -873,7 +873,7 @@
                 "logDriver": "awslogs",
                 "secretOptions": null,
                 "options": {
-                    "awslogs-group": "/ecs/ticketingapps",
+                    "awslogs-group": "/ecs/ticketingapp",
                     "awslogs-region": "us-east-1",
                     "awslogs-stream-prefix": "ecs"
                 }

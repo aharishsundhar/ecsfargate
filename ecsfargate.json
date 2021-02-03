@@ -28,7 +28,7 @@
             "logConfiguration": {
                 "logDriver": "awslogs",
                 "options": {
-                    "awslogs-group": "/ecs/moongo-8442",
+                    "awslogs-group": "/ecs/narrow",
                     "awslogs-region": "us-east-1",
                     "awslogs-stream-prefix": "ecs"
                 }
@@ -46,7 +46,7 @@
     "memory": "1024",
     "cpu": "256",
     "executionRoleArn": "arn:aws:iam::967636366309:role/ecsTaskExecutionRole",
-    "family": "moongo-8442",
+    "family": "narrow",
     "taskRoleArn": "arn:aws:iam::967636366309:role/ecsTaskExecutionRole",
     "tags": [],
     "placementConstraints": []

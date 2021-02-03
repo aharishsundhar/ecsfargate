@@ -5,16 +5,15 @@
     "inferenceAccelerators": [],
     "containerDefinitions": [
         {
-            "name": "newoneui-8442",
-            "image": "harishsundhar/fargate:newoneui-8442",
-            "memoryReservation": "800",
+            "name": "mongo8442",
+            "image": "geppettotest/mongo-local:april2020",
+            "memoryReservation": "600",
             "resourceRequirements": null,
             "essential": true,
             "portMappings": [
                 {
-                    "containerPort": "5000",
-                    "protocol": "tcp",
-		    "hostPort": "5000"
+                    "containerPort": "27017",
+                    "protocol": "tcp"
                 }
             ],
             "environment": null,
@@ -29,7 +28,7 @@
             "logConfiguration": {
                 "logDriver": "awslogs",
                 "options": {
-                    "awslogs-group": "/ecs/newone-8442",
+                    "awslogs-group": "/ecs/moongo-8442",
                     "awslogs-region": "us-east-1",
                     "awslogs-stream-prefix": "ecs"
                 }
@@ -42,18 +41,13 @@
             }
         }
     ],
-    "volumes": [
-        {
-            "host": {},
-            "name": "newtesting"
-        }
-    ],
+    "volumes": [],
     "networkMode": "awsvpc",
-    "memory": "5120",
-    "cpu": "2048",
+    "memory": "1024",
+    "cpu": "256",
     "executionRoleArn": "arn:aws:iam::967636366309:role/ecsTaskExecutionRole",
-    "family": "newone-8442",
+    "family": "moongo-8442",
+    "taskRoleArn": "arn:aws:iam::967636366309:role/ecsTaskExecutionRole",
     "tags": [],
-    "placementConstraints": [],
-    "taskRoleArn": "arn:aws:iam::967636366309:role/ecsTaskExecutionRole"
+    "placementConstraints": []
 }

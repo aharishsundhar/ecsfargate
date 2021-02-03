@@ -43,9 +43,9 @@ jobs:
       with:
         task-definition: ecsfargate.json
         container-name: |
-          mongo-3611
+          newoneui-8442
         image: |
-          geppettotest/mongo-local:april2020
+          harishsundhar/fargate:newoneui-8442
 
     - name: Deploy Amazon ECS task definition
       uses: aws-actions/amazon-ecs-deploy-task-definition@v1

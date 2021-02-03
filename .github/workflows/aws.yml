@@ -44,27 +44,8 @@ jobs:
         task-definition: ecsfargate.json
         container-name: |
           mongo-3611
-          camunda-3611
-          authproxy-3611
-          camundasvc-3611
-          securitymanager-3611
-          apigateway-3611
-          severitymaintenance-3611
-          servicetypemaintenance-3611
-          ticketing-3611
-          testticketoneui-3611
         image: |
           geppettotest/mongo-local:april2020
-          geppettodistribution/camunda-local:Jan2021
-          geppettodistribution/authproxy-3611
-          geppettodistribution/camundaservice-3611
-          geppettodistribution/securitymanager-3611
-          geppettodistribution/apigateway-3611
-          geppettodistribution/severitymaintenance-3611
-          geppettodistribution/servicetypemaintenance-3611
-          geppettodistribution/ticketing-3611
-          geppettodistribution/testticketoneui-3611
-          
 
     - name: Deploy Amazon ECS task definition
       uses: aws-actions/amazon-ecs-deploy-task-definition@v1

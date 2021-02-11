@@ -5,8 +5,8 @@
     "inferenceAccelerators": [],
     "containerDefinitions": [
         {
-            "name": "newoneui-8442",
-            "image": "harishsundhar/fargate:newoneui-8442",
+            "name": "apigateway-8442",
+            "image": "harishsundhar/fargate:apigateway-8442",
             "memoryReservation": "300",
             "resourceRequirements": null,
             "essential": true,

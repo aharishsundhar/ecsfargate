@@ -7,14 +7,14 @@
         {
             "name": "newoneui-8442",
             "image": "harishsundhar/fargate:newoneui-8442",
-            "memoryReservation": "800",
+            "memoryReservation": "300",
             "resourceRequirements": null,
             "essential": true,
             "portMappings": [
                 {
-                    "containerPort": "5000",
+                    "containerPort": "8000",
                     "protocol": "tcp",
-		    "hostPort": "5000"
+		    "hostPort": "8000"
                 }
             ],
             "environment": null,
@@ -29,10 +29,10 @@
             "logConfiguration": {
                 "logDriver": "awslogs",
                 "options": {
-                    "awslogs-group": "/ecs/autofargate",
+                    "awslogs-group": "/ecs/autos",
                     "awslogs-region": "us-east-1",
                     "awslogs-stream-prefix": "ecs",
-		    "awslogs-create-group": "true",
+		    "awslogs-create-group": "true"
                 }
             },
             "ulimits": null,
@@ -50,10 +50,10 @@
         }
     ],
     "networkMode": "awsvpc",
-    "memory": "5120",
-    "cpu": "2048",
+    "memory": "500",
+    "cpu": "256",
     "executionRoleArn": "arn:aws:iam::967636366309:role/ecsTaskExecutionRole",
-    "family": "autofargate",
+    "family": "autos",
     "tags": [],
     "placementConstraints": [],
     "taskRoleArn": "arn:aws:iam::967636366309:role/ecsTaskExecutionRole"

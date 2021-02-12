@@ -38,7 +38,7 @@ jobs:
 #         echo "::set-output name=image::$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"
     - name: TS file to json
       run: |
-        NAME=apigateway-8442 node fargate.ts >> ecsfargate.json
+        NAME=apigateway-8442 node fargate.ts >> fargate.json
         pwd
         ls
         cat ecsfargate.json
@@ -46,7 +46,7 @@ jobs:
       id: task-def
       uses: aws-actions/amazon-ecs-render-task-definition@v1
       with:
-        task-definition: /.github/workflows/ecsfargate.json
+        task-definition: fargate.json
         container-name: apigateway-8442
         image: harishsundhar/fargate:apigateway-8442
 

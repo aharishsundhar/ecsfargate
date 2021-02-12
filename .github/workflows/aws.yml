@@ -40,7 +40,7 @@ jobs:
       env: 
         APIGATEWAY: ${{ secrets.APIGATWAY }} 
       run: |
-        NAME= ${{ env.APIGATEWAY }} node fargate.ts >> fargate1.json
+        node fargate.ts >> fargate1.json
         pwd
         ls
         cat fargate1.json

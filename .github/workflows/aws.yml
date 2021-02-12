@@ -15,7 +15,7 @@ jobs:
       with:
         files: 'ecsfargate.json'
       env:
-        name: apigateway-8442
+        memory: 1245
 
     - name: Configure AWS credentials
       uses: aws-actions/configure-aws-credentials@v1

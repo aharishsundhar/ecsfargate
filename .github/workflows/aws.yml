@@ -41,7 +41,7 @@ jobs:
         NAME=secrets.APIGATEWAY node fargate.ts >> fargate.json
         pwd
         ls
-        cat ecsfargate.json
+        cat fargate.json
     - name: Fill in the new image ID in the Amazon ECS task definition
       id: task-def
       uses: aws-actions/amazon-ecs-render-task-definition@v1

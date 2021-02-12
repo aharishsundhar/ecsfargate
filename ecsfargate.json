@@ -50,7 +50,7 @@
         }
     ],
     "networkMode": "awsvpc",
-    "memory": "512",
+    "memory": "",
     "cpu": "256",
     "executionRoleArn": "arn:aws:iam::967636366309:role/ecsTaskExecutionRole",
     "family": "APIFargate",

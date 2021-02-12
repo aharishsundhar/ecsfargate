@@ -38,7 +38,7 @@ jobs:
 #         echo "::set-output name=image::$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"
     - name: TS file to json
       run: |
-        NAME=apigateway-8442 node fargate.ts >> fargate.json
+        NAME=secrets.APIGATEWAY node fargate.ts >> fargate.json
         pwd
         ls
         cat ecsfargate.json

@@ -39,6 +39,7 @@ jobs:
     - name: TS file to json
       run: |
         NAME=apigateway-8442 node fargate.ts >> ecsfargate.json
+        pwd
         ls
         cat ecsfargate.json
     - name: Fill in the new image ID in the Amazon ECS task definition

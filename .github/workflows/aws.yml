@@ -37,13 +37,12 @@ jobs:
 #         docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
 #         echo "::set-output name=image::$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"
     - name: TS file to json
-      env: 
-        APIGATEWAY: ${{ secrets.APIGATWAY }} 
-      run: |
-        node fargate.ts >> fargate1.json
-        pwd
-        ls
-        cat fargate1.json
+      uses: microsoft/variable-substitution@v1 
+      with:
+        files: 'ecsfargate.json'
+      env:
+        containerDefinitions.name: ${{ secrets.APIGATEWAY }}
+     
     - name: Fill in the new image ID in the Amazon ECS task definition
       id: task-def
       uses: aws-actions/amazon-ecs-render-task-definition@v1

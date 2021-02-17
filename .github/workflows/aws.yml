@@ -65,4 +65,4 @@ jobs:
         cluster: Cost-Estimation-Testing
         wait-for-service-stability: true
         command: |
-          aws ecs list-container-instances --cluster default
+          aws ecs list-container-instances --cluster Cost-Estimation-Testing

@@ -11,6 +11,11 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v2
+#     - uses: microsoft/variable-substitution@v1 
+#       with:
+#         files: 'ecsfargate.json'
+#       env:
+#         .containerDefinitions[0].name: apigateway-258
 
     - name: Configure AWS credentials
       uses: aws-actions/configure-aws-credentials@v1
@@ -36,17 +41,20 @@ jobs:
 #         docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
 #         docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
 #         echo "::set-output name=image::$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"
-    - name: TS file to json
-      run: |
-        NAME=apigateway-8442 node fargate.ts >> fargate.json
-        pwd
-        ls
-        cat ecsfargate.json
+#     - name: TS file to json
+#       run: |
+#         NAME=$APIGATEWAY node fargate.ts >> fargate1.json
+#         pwd 
+#         ls
+#         cat fargate1.json
+#       env:
+#         APIGATEWAY: ${{ secrets.APIGATEWAY }}
+     
     - name: Fill in the new image ID in the Amazon ECS task definition
       id: task-def
       uses: aws-actions/amazon-ecs-render-task-definition@v1
       with:
-        task-definition: fargate.json
+        task-definition: ecsfargate.json
         container-name: apigateway-8442
         image: harishsundhar/fargate:apigateway-8442
 
@@ -54,5 +62,7 @@ jobs:
       uses: aws-actions/amazon-ecs-deploy-task-definition@v1
       with:
         task-definition: ${{ steps.task-def.outputs.task-definition }}
-        cluster: deployment-of-generated-code
+        cluster: Cost-Estimation-Testing
         wait-for-service-stability: true
+        command: |
+          aws ecs run-task --cluster Cost-Estimation-Testing --task-definition APIFargate:10

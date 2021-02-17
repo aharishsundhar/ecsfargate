@@ -32,7 +32,7 @@ module.exports = {
                         "awslogs-group": "/ecs/APIFargate",
                         "awslogs-region": "us-east-1",
                         "awslogs-stream-prefix": "ecs",
-                "awslogs-create-group": "true"
+                        "awslogs-create-group": "true"
                     }
                 },
                 "ulimits": null,

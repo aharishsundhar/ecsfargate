@@ -61,9 +61,8 @@ jobs:
     - name: Deploy Amazon ECS task definition
       uses: aws-actions/amazon-ecs-deploy-task-definition@v1
       with:
-#         task-definition: ${{ steps.task-def.outputs.task-definition }}
-#         cluster: deployment-of-generated-code
-#         wait-for-service-stability: true
-
+        task-definition: ${{ steps.task-def.outputs.task-definition }}
+        cluster: Cost-Estimation-Testing
+        wait-for-service-stability: true
         command: |
           aws ecs list-container-instances --cluster default

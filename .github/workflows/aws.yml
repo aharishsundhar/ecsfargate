@@ -54,7 +54,7 @@ jobs:
       id: task-def
       uses: aws-actions/amazon-ecs-render-task-definition@v1
       with:
-        task-definition: /.github/workflows/ecsfargate.json
+        task-definition: .github/workflows/ecsfargate.json
         container-name: apigateway-8442
         image: harishsundhar/fargate:apigateway-8442
 

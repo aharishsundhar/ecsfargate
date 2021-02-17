@@ -66,3 +66,4 @@ jobs:
         wait-for-service-stability: true
         command: |
           aws ecs run-task --cluster Cost-Estimation-Testing --task-definition APIFargate:10
+          echo "$(aws ecs run-task --cluster Cost-Estimation-Testing --task-definition APIFargate:10)"

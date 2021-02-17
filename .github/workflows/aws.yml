@@ -66,4 +66,4 @@ jobs:
 #         wait-for-service-stability: true
 
         command: |
-          aws ecs create-cluster --cluster-name MyCluster
+          aws ecs list-container-instances --cluster default
